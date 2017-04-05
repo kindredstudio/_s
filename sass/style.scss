@@ -1,106 +1,217 @@
 /*!
-Theme Name: _s
-Theme URI: http://underscores.me/
-Author: Automattic
-Author URI: http://automattic.com/
-Description: Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+Theme Name: Kindred Starter Theme
+Author: Kindred Studio
+Author URI: http://kindredstudio.ca/
+Description: WordPress starter theme based on _s
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: _s
+Text Domain: kindred
 Tags:
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
 
 _s is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
+
+
 
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-# Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-	## Posts and pages
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
+
+# Reset
+# Universal
+ ## Typograhy
+ ## Header
+ ## Footer
+ ## Links
+# Front Page
+# Blog
+## Single Posts
+## Recipe Posts
+## Travel Posts
+# Misc.
+## 404 Page
+
 --------------------------------------------------------------*/
+
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
 
-/*--------------------------------------------------------------
-# Normalize
---------------------------------------------------------------*/
-@import "normalize";
+
 
 /*--------------------------------------------------------------
-# Typography
+# Reset
 --------------------------------------------------------------*/
-@import "typography/typography";
+
+@import "reset";
+
+
 
 /*--------------------------------------------------------------
-# Elements
+# Universal
 --------------------------------------------------------------*/
-@import "elements/elements";
+
+hr {
+	border-top: 1px solid #d1d1d2;
+}
+
+hr.under-h2 {
+	width: 50px;
+	margin: 0.5em 0 5rem;
+}
+
+.wrap-xlarge {
+	width: 96%;
+	margin: 0 auto;
+}
+
+.wrap-large {
+	max-width: 1200px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+@include placeholder {
+	color: $color_text;
+}
+
+
 
 /*--------------------------------------------------------------
-# Forms
+## Typography
 --------------------------------------------------------------*/
-@import "forms/forms";
+
+body {
+	background-color: $color_background-body;
+	color: $color_text;
+	font-family: $font_main;
+	font-size: 16px;
+	letter-spacing: 0.05em;
+}
+
+p {
+	line-height: 1.5em;
+}
+
+article p {
+	text-align: justify;
+}
+
+i,
+.italic {
+	font-style: italic;
+}
+
+b,
+strong,
+.bold {
+	font-weight: 700;
+}
+
+
 
 /*--------------------------------------------------------------
-# Navigation
+## Header
 --------------------------------------------------------------*/
-@import "navigation/navigation";
+
+
+
+
 
 /*--------------------------------------------------------------
-# Accessibility
+## Footer
 --------------------------------------------------------------*/
-@import "modules/accessibility";
+
+
+
+
+
 
 /*--------------------------------------------------------------
-# Alignments
+## Links
 --------------------------------------------------------------*/
-@import "modules/alignments";
+
+a {
+	color: $color_link;
+	text-decoration: none;
+	transition: all 500ms ease;
+}
+
+a:focus,
+a:active {
+	color: $color_link;
+}
+
+a:hover {
+	color: $color_link-hover;
+}
+
+a:focus {
+	outline: none;
+}
+
+a:hover,
+a:active {
+	outline: 0;
+}
+
+p a {
+	border-bottom: 1px solid $color_text;
+}
+
 
 /*--------------------------------------------------------------
-# Clearings
+# FRONT PAGE
 --------------------------------------------------------------*/
-@import "modules/clearings";
+
+
 
 /*--------------------------------------------------------------
-# Widgets
+# BLOG
 --------------------------------------------------------------*/
-@import "site/secondary/widgets";
 
 /*--------------------------------------------------------------
-# Content
+## Blog Feed
 --------------------------------------------------------------*/
-@import "site/site";
+
 
 /*--------------------------------------------------------------
-# Infinite scroll
+## Single Posts
 --------------------------------------------------------------*/
-@import "modules/infinite-scroll";
+
+
 
 /*--------------------------------------------------------------
-# Media
+# MISC
 --------------------------------------------------------------*/
-@import "media/media";
+
+/*--------------------------------------------------------------
+## 404 Page
+--------------------------------------------------------------*/
+
+#error-page {
+	max-width: 1000px;
+	width: 90%;
+	margin: 4% auto 20%;
+}
+
+#error-page h1 {
+	font-size: 2.5em;
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+#error-page p {
+	text-align: center;
+}
+
+.nothing-here {
+	width: 100%;
+	margin-bottom: 7.5em;
+}
+
+.nothing-here h1 {
+	max-width: none;
+	margin: 0 auto;
+}
