@@ -105,7 +105,11 @@ add_action( 'widgets_init', 'kindred_widgets_init' );
  * Enqueue scripts and styles.
  */
 function kindred_scripts() {
-	wp_enqueue_style( 'kindred-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'kindred-style', get_stylesheet_directory_uri() . '/style.css', array(), filemtime( get_stylesheet_directory() . '/style.css' ) );
+
+	wp_register_script('another-script', get_template_directory_uri() . '/js/', false, filemtime( get_stylesheet_directory().'/js/' ), true);
+	
+	wp_enqueue_script( 'another-script' );
 
 	wp_enqueue_script( 'kindred-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
