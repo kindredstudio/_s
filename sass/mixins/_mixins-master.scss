@@ -19,20 +19,34 @@
 
 // Flex Between
 @mixin flex-between {
-	display: flex;
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;    
 	justify-content: space-between;
 	align-items: center;
 }
 
 // Flex Around
 @mixin flex-around {
-	display: flex;
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;  
 	justify-content: space-around;
 	align-items: center;
 }
 
 // Flex Around Wrap
 @mixin flex-around-wrap {
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
 	display: flex;
 	justify-content: space-around;
 	align-content: center;
@@ -41,6 +55,11 @@
 
 // Flex Between
 @mixin flex-between-wrap {
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
 	display: flex;
 	justify-content: space-between;
 	align-content: center;
@@ -49,6 +68,11 @@
 
 // Flex Start Wrap
 @mixin flex-start-wrap {
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
 	display: flex;
 	justify-content: flex-start;
 	flex-wrap: wrap;
