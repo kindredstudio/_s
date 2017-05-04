@@ -1,3 +1,16 @@
+/* TYPOGRAPHY */
+
+// Styles
+@mixin italic {
+	font-style: italic;
+}
+
+@mixin bold {
+	font-weight: 700;
+}
+
+/* LAYOUT */
+
 // Center block
 @mixin center-block {
 	display: block;
@@ -17,8 +30,30 @@
 	clear: both;
 }
 
+// Wrapper class
+@mixin wrapper {
+	max-width: 1020px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+/* FLEXBOX */
+
+// Flex
+@mixin flex {
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;
+}
+
 // Flex Between
 @mixin flex-between {
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -26,6 +61,10 @@
 
 // Flex Around
 @mixin flex-around {
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -33,6 +72,10 @@
 
 // Flex Around Wrap
 @mixin flex-around-wrap {
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
 	display: flex;
 	justify-content: space-around;
 	align-content: center;
@@ -41,6 +84,10 @@
 
 // Flex Between
 @mixin flex-between-wrap {
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
 	display: flex;
 	justify-content: space-between;
 	align-content: center;
@@ -49,10 +96,16 @@
 
 // Flex Start Wrap
 @mixin flex-start-wrap {
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
 	display: flex;
 	justify-content: flex-start;
 	flex-wrap: wrap;
 }
+
+/* MISC */
 
 // Lines
 @mixin lines {
@@ -84,8 +137,9 @@
 
 // Placeholders
 @mixin placeholder {
-  ::-webkit-input-placeholder {@content}
-  :-moz-placeholder           {@content}
-  ::-moz-placeholder          {@content}
-  :-ms-input-placeholder      {@content}
+	&placeholder 					{@content}
+	&:-webkit-input-placeholder 	{@content}
+	&:-moz-placeholder           	{@content}
+	&::-moz-placeholder          	{@content}
+	&:-ms-input-placeholder      	{@content}
 }
