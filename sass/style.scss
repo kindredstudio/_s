@@ -35,18 +35,14 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 --------------------------------------------------------------*/
 
-@import "variables-site/variables-site";
+@import "variables-site/variables";
 @import "mixins/mixins-master";
-
-
 
 /*--------------------------------------------------------------
 # Reset
 --------------------------------------------------------------*/
 
 @import "reset";
-
-
 
 /*--------------------------------------------------------------
 # Universal
@@ -61,22 +57,20 @@ hr.under-h2 {
 	margin: 0.5em 0 5rem;
 }
 
-.wrap-xlarge {
-	width: 96%;
+.wrapper { 
+	max-width: 1200px;
+	width: 90%;
 	margin: 0 auto;
 }
 
-.wrap-large {
-	max-width: 1200px;
-	width: 90%;
+.wrapper-xl {
+	width: 96%;
 	margin: 0 auto;
 }
 
 @include placeholder {
 	color: $color_text;
 }
-
-
 
 /*--------------------------------------------------------------
 ## Typography
@@ -109,22 +103,15 @@ strong,
 	font-weight: 700;
 }
 
-
-
 /*--------------------------------------------------------------
 ## Header
 --------------------------------------------------------------*/
 
 
 
-
-
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
-
-
-
 
 
 
