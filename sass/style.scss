@@ -1,4 +1,4 @@
-/*!
+/*
 Theme Name: Kindred Starter Theme
 Author: Kindred Studio
 Author URI: http://kindredstudio.ca/
@@ -19,9 +19,8 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 
-# Reset
 # Universal
- ## Typograhy
+ ## Typography
  ## Header
  ## Footer
  ## Links
@@ -35,13 +34,8 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 --------------------------------------------------------------*/
 
-@import "variables-site/variables";
+@import "variables/variables";
 @import "mixins/mixins-master";
-
-/*--------------------------------------------------------------
-# Reset
---------------------------------------------------------------*/
-
 @import "reset";
 
 /*--------------------------------------------------------------
@@ -202,3 +196,9 @@ p a {
 	max-width: none;
 	margin: 0 auto;
 }
+
+/*--------------------------------------------------------------
+# Responsive
+--------------------------------------------------------------*/
+
+@import "responsive";

@@ -1,4 +1,8 @@
 <?php
+/*
+    Template Name: Front page
+ */
+    
 /**
  * The template for displaying the front page
  *
