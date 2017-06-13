@@ -4,6 +4,7 @@ $color_background-button: #e6e6e6;
 $color_background-pre: #eee;
 $color_background-ins: #fff9c0;
 
+
 $color_text: #1d1d1b;
 $color_link: royalblue;
 $color_link-visited: purple;
@@ -14,3 +15,7 @@ $color_border-button-hover: #ccc #bbb #aaa;
 $color_border-button-focus: #aaa #bbb #bbb;
 $color_border-input: #ccc;
 $color_border-abbr: #666;
+
+// for screen readers
+$color_background-screen: #fff;
+$color_text-screen: #333;
