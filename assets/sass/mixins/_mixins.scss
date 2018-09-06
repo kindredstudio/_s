@@ -1,0 +1,175 @@
+@import 'include-media.scss';
+
+/* TYPOGRAPHY */
+
+// Styles
+@mixin italic {
+    font-style: italic;
+}
+
+@mixin bold {
+    font-weight: 700;
+}
+
+/* LAYOUT */
+
+// Center block
+@mixin center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+    display: table;
+    content: '';
+    table-layout: fixed;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+    clear: both;
+}
+
+// Wrapper class
+@mixin wrapper {
+    width: 90%;
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+// Fixed bg img
+@mixin bg-img {
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* FLEXBOX */
+
+// Flex
+@mixin flex {
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Chrome */
+    display: flex;
+}
+
+// Flex Between
+@mixin flex-between {
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Chrome */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+// Flex Around
+@mixin flex-around {
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Chrome */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+// Flex Around Wrap
+@mixin flex-around-wrap {
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Chrome */
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+}
+
+// Flex Between
+@mixin flex-between-wrap {
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Chrome */
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+}
+
+// Flex Start Wrap
+@mixin flex-start-wrap {
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Chrome */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+/* MISC */
+
+// Lines
+@mixin lines {
+    position: relative;
+    margin: 0 auto 7.5em;
+    text-align: center;
+}
+
+// Lines heading
+@mixin lines-heading {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    padding: 0.25em 3% 0;
+    background-color: #fdfdfd;
+}
+
+// Lines after
+@mixin lines-after {
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid #d1d1d2;
+    content: '';
+}
+
+// Placeholders
+@mixin placeholder {
+    &.placeholder {
+        @content;
+    }
+
+    &#placeholder {
+        @content;
+    }
+
+    &::-webkit-input-placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+}

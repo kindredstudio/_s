@@ -1,0 +1,88 @@
+/*!
+Theme Name: Found Design
+Author: Kindred Studio
+Author URI: http://kindredstudio.ca/
+Description: Custom theme for foundesignstudio.co
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: kindred
+Tags:
+
+_s is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+*/
+
+/* -------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+
+# Front Page
+# Blog
+ ## Single Posts
+# Portfolio
+ ## Projects
+# Misc.
+# 404 Page
+
+------------------------------------------------------------- */
+
+@import 'variables/variables';
+@import 'mixins/mixins';
+@import 'base/base';
+
+/* -------------------------------------------------------------
+# FRONT PAGE
+------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------
+# BLOG
+------------------------------------------------------------- */
+
+/* -------------------------------------------------------------
+## Single Posts
+------------------------------------------------------------- */
+
+
+
+/* -------------------------------------------------------------
+# PORTFOLIO
+------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------
+## Projects
+------------------------------------------------------------- */
+
+
+
+/* -------------------------------------------------------------
+## 404 Page
+------------------------------------------------------------- */
+
+#error-page {
+    width: 90%;
+    max-width: 1000px;
+    margin: 4% auto 20%;
+}
+
+#error-page h1 {
+    margin-bottom: 1em;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+#error-page p {
+    text-align: center;
+}
+
+.nothing-here {
+    width: 100%;
+    margin-bottom: 7.5em;
+}
+
+.nothing-here h1 {
+    max-width: none;
+    margin: 0 auto;
+}

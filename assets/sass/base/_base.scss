@@ -1,0 +1,91 @@
+@import 'reset';
+@import 'typography';
+
+/* -------------------------------------------------------------
+# Universal
+------------------------------------------------------------- */
+
+body {
+    background-color: $color_background-main;
+    color: $color_text;
+    font-family: $font_main;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+}
+
+hr {
+    border-top: 1px solid $color_text;
+}
+
+.wrap-xlarge {
+    width: 96%;
+    margin: 0 auto;
+}
+
+.wrap {
+    width: 90%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.wrap-sm {
+    width: 85%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.flex-block {
+    @include flex;
+}
+
+input,
+textarea,
+.caldera-grid .form-control {
+    @include placeholder {
+        color: $color_text !important;
+        font-size: 1.125rem;
+        font-style: italic;
+        letter-spacing: 0.1em;
+    }
+}
+
+/* -------------------------------------------------------------
+## Links
+------------------------------------------------------------- */
+
+a {
+    color: $color_text;
+    text-decoration: none;
+    transition: all 300ms ease;
+}
+
+a:focus,
+a:active {
+    color: $color_text;
+}
+
+a:hover {
+    color: $color_link-hover;
+}
+
+a:focus {
+    outline: none;
+}
+
+a:hover,
+a:active {
+    outline: 0;
+}
+
+p a {
+    font-style: italic;
+}
+
+/* -------------------------------------------------------------
+## Header
+------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------
+## Footer
+------------------------------------------------------------- */
